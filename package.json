@@ -2,18 +2,21 @@
   "name": "study-list-api",
   "version": "1.0.0",
   "description": "\"Api to Study List\"",
-  "main": "index.js",
+  "main": "bin/server.js",
   "repository": "git@github.com:atiladelcanton/study-list-api.git",
   "author": "Atila Rampazo <atilarampazo@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "guid": "^0.0.12",
     "jsonwebtoken": "^8.5.1",
     "pg": "^7.18.1",
     "pg-hstore": "^2.3.3",
     "promise": "^8.0.3",
+    "sendgrid": "^5.2.3",
     "sequelize": "^5.21.4",
     "sequelize-cli": "^5.5.1"
   },
@@ -22,5 +25,10 @@
     "nodemon": "^2.0.2",
     "sqlite3": "^4.1.1",
     "supertest": "^4.0.2"
+  },
+  "scripts": {
+    "start": "node bin/server.js",
+    "dev": "nodemon src/server.js --ignore __testes__",
+    "test": "NODE_ENV=test jest"
   }
 }
