@@ -9,7 +9,7 @@ O projeto referece a um TodoList voltado para estudo de TI pessoal.
 - JWT
 - Jest (para testes unitarios e de integração)
 - Postgres
-- Graphql (em breve rsrsrs)
+- GraphQL (em breve rsrsrs)
 - Scoket.io (em breve rsrsrs)
 
 ### Informações Gerais
