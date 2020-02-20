@@ -6,6 +6,7 @@ O projeto referece a um TodoList voltado para estudo de TI pessoal.
 # Tecnologias!
 
 - Node.js
+- JWT
 - Jest (para testes unitarios e de integração)
 - Postgres
 - Graphql (em breve rsrsrs)
