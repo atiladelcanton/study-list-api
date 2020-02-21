@@ -6,9 +6,11 @@ O projeto referece a um TodoList voltado para estudo de TI pessoal.
 # Tecnologias!
 
 - Node.js
+- JWT
+- Jest
 - Postgres
-- Graphql (em breve rsrsrs)
-- Scoket.io (em breve rsrsrs)
+- GraphQL
+- Scoket.io
 
 ### Informações Gerais
 
