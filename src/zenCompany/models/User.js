@@ -1,4 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcryptjs");
+const uuidv1 = require("uuid/v1");
 class User extends Model {
   static init(sequelize) {
     super.init(
@@ -6,15 +8,16 @@ class User extends Model {
         name: DataTypes.STRING,
         email: DataTypes.STRING,
         password: DataTypes.STRING,
-        hash_validation_account: DataTypes.BOOLEAN
+        hash_validation_account: DataTypes.STRING,
+        account_is_valid: DataTypes.BOOLEAN
       },
       {
-        sequelize,
+        sequelize: sequelize,
         tableName: "users"
       }
     );
   }
-  static associate(models) {
+  /*static associate(models) {
     this.hasMany(models.Tag, {
       foreignKey: "user_id",
       as: "tags"
@@ -27,7 +30,6 @@ class User extends Model {
       foreignKey: "user_id",
       as: "categories_card"
     });
-  }
+  }*/
 }
-
 module.exports = User;
