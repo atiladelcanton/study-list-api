@@ -72,5 +72,33 @@ module.exports = {
     user.hash_validation_account = "";
     user.account_is_valid = 1;
     return await user.save();
+  },
+  /**
+   * Return User With ID
+   *
+   * @param {*} id
+   * @returns
+   */
+  async getById(id) {
+    let user = User.findByPk(id);
+
+    return user;
+  },
+  /**
+   *Update Register
+   *
+   * @param {*} id
+   * @param {*} data
+   * @returns
+   */
+  async update(id, data) {
+    let user = await User.findByPk(id);
+    return await user.save(data);
+  },
+
+  async delete(id) {
+    let user = await User.findByPk(id);
+
+    await user.destroy();
   }
 };

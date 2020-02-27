@@ -71,5 +71,32 @@ module.exports = {
       return true;
     }
     return false;
+  },
+
+  async getById(id) {
+    let user = await repository.getById(id);
+
+    if (user) {
+      return user;
+    } else {
+      return false;
+    }
+  },
+
+  /**
+   *Update Register
+   *
+   * @param {*} id
+   * @param {*} data
+   * @returns
+   */
+  async update(id, data) {
+    const user = await repository.update(id, data);
+
+    return user;
+  },
+
+  async delete(id) {
+    return await repository.delete(id);
   }
 };
